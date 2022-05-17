@@ -3,4 +3,12 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  text-align: center;
+}
+
+.copy {
+  display: block;
+  margin: auto;
+  padding: 1em;
+  text-align: center;
 }

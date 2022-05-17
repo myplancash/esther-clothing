@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="102px" height="35px" viewBox="0 0 102 35" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
+    <title>Artboard</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Artboard" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Shopping" transform="translate(2.000000, 2.000000)">
+            <path d="M19.719083,31 L3.72960927,31 C1.48273207,31 -0.254250383,29.0557188 0.0306618975,26.8585938 L2.46518821,9.07428125 C2.55164435,8.40778125 3.12736365,7.90790625 3.80918821,7.90790625 L19.639504,7.90790625 C20.3213286,7.90790625 20.8970479,8.40778125 20.983504,9.07428125 L23.4180303,26.8585938 C23.7029426,29.0557188 21.9659601,31 19.719083,31 Z" id="Stroke-41" stroke="#241C15" stroke-width="2.94" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path d="M16.510283,7.90790625 L16.510283,4.65484375 C16.510283,2.08378125 14.3970198,7.10542736e-15 11.7905637,7.10542736e-15 C9.18410751,7.10542736e-15 7.07084435,2.08378125 7.07084435,4.65484375 L7.07084435,7.90790625" id="Stroke-43" stroke="#241C15" stroke-width="2.94" stroke-linecap="round" stroke-linejoin="round"></path>
+            <ellipse id="Oval-Copy-4" fill="#B2FFEE" opacity="0.748651414" style="mix-blend-mode: multiply;" cx="15.7192982" cy="15.984375" rx="12.2807018" ry="12.109375"></ellipse>
+        </g>
+        <text id="Esther" font-family="Milkshake" font-size="23.6" font-weight="normal" letter-spacing="0.950265527" fill="#241C15">
+            <tspan x="39.8882034" y="26">Esther</tspan>
+        </text>
+    </g>
+</svg>

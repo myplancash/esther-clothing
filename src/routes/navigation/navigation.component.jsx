@@ -7,7 +7,7 @@ import CartDropdown from '../../components/cart-dropdown/cart-dropdown.component
 import { UserContext } from '../../contexts/user.context';
 import { CartContext } from '../../contexts/cart.context';
 
-import { ReactComponent as CrwnLogo } from '../../assets/crown.svg';
+import { ReactComponent as CrwnLogo } from '../../assets/esther-logo.svg';
 
 import { signOutUser } from '../../utils/firebase/firebase.utils';
 
