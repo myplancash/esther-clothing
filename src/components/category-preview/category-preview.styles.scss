@@ -3,6 +3,11 @@
   flex-direction: column;
   margin-bottom: 30px;
 
+  h2 {
+    padding: .3em;
+    border-bottom: 1px solid rgba(169, 169, 169, 0.8);
+  }
+
   .title {
     font-size: 28px;
     margin-bottom: 25px;
