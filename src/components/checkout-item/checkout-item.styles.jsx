@@ -9,6 +9,7 @@ export const CheckoutItemsContainer = styled.div`
   font-size: 20px;
   align-items: center;
 `
+
 export const ImageContainer = styled.div`
   width: 20%;
   padding-right: 15px;
