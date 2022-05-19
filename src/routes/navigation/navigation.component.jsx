@@ -26,7 +26,7 @@ const Navigation = () => {
     <Fragment>
       <NavigationContainer>
         <LogoContainer to='/'>
-          <EstherLogo className='logo' />
+          <EstherLogo />
         </LogoContainer>
         <NavLinks>
           <NavLink to='/shop'>
