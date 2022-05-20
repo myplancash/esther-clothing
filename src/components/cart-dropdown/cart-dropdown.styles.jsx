@@ -24,6 +24,12 @@ export const CartItems = styled.div`
   display: flex;
   flex-direction: column;
   overflow: scroll;
+  color: "#A9A9A9";
+
+  span {
+    color: "#A9A9A9";
+    text-align: center;
+  }
 `
 /*   .empty-message {
     font-size: 18px;
