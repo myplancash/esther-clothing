@@ -11,8 +11,6 @@ import {
 } from './cart-item.styles.jsx';
 
 
-
-
 const CartItem = ({ cartItem }) => {
 
 
