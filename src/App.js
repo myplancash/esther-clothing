@@ -5,12 +5,8 @@ import { Routes, Route } from 'react-router-dom';
 import { setCurrentUser } from './store/user/user.action';
 import {
   onAuthStateChangedListener,
-  createUserDocumentFromAuth,
-  getCategoriesAndDocuments
+  createUserDocumentFromAuth
 } from './utils/firebase/firebase.utils';
-
-
-import { setCategoriesMap } from './store/categories/categories.action';
 
 import Home from './routes/home/home.component';
 import Navigation from './routes/navigation/navigation.component';
@@ -20,14 +16,6 @@ import Checkout from './routes/checkout/checkout.component';
 
 const App = () => {
   const dispatch = useDispatch();
-
-  useEffect(() => {
-    const getCategoriesMap = async () => {
-      const categoryMap = await getCategoriesAndDocuments();
-      dispatch(setCategoriesMap(categoryMap));
-    }
-    getCategoriesMap();
-  }, []);
 
   useEffect(() => {
     const unsubscribe = onAuthStateChangedListener((user) => {

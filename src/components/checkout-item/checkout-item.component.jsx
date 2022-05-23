@@ -15,7 +15,7 @@ import {
 const CheckoutItem = ({ cartItem }) => {
   const dispatch = useDispatch();
   const cartItems = useSelector(selectCartItems);
-  const { name, imageUrl, price, quantity } = cartItems;
+  const { name, imageUrl, price, quantity } = cartItem;
 
   const clearItemHandler = () => dispatch(clearItemFromCart(cartItems, cartItem));
   const addItemHandler = () => dispatch(addItemToCart(cartItems, cartItem));
@@ -33,7 +33,7 @@ const CheckoutItem = ({ cartItem }) => {
             <span>{quantity}</span>
           <div onClick={addItemHandler}>&#10095;</div>
         </Quantity>
-        <Price>${price}</Price>
+        <Price>${price * quantity}</Price>
         <RemoveButton onClick={clearItemHandler}>&#10005;</RemoveButton>
       </Items>
     </CheckoutItemsContainer>

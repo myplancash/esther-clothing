@@ -10,6 +10,7 @@ export const CategoryPreviewContainer = styled.div`
 
 export const Title = styled(Link)`
   font-size: 1em;
+  letter-spacing: 0.1em;
   cursor: pointer;
 
 
