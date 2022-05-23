@@ -1,7 +1,10 @@
 import { Fragment } from 'react/cjs/react.production.min';
 import DirectoryItem from '../directory-item/directory-item.component';
 
-import './directory.styles.scss';
+import {
+  DirectoryContainer,
+  Copy
+} from './directory.styles.jsx';
 
 const categories = [
     {
@@ -51,12 +54,12 @@ const categories = [
 const Directory = () => {
   return (
     <Fragment>
-      <div className='directory-container'>
+      <DirectoryContainer>
         {categories.map((category) => (
           <DirectoryItem key={category.id} category={category} />
         ))}
-      </div>
-      <div className='copy'>© 2022 Esther, Inc.</div>
+      </DirectoryContainer>
+      <Copy>© 2022 Esther, Inc.</Copy>
     </Fragment>
   );
 };
