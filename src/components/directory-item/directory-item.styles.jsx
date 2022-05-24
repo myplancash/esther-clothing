@@ -19,6 +19,7 @@ export const DirectoryBodyContainer = styled.div`
   opacity: 0.7;
   position: absolute;
 
+
   h2 {
     font-weight: bold;
     margin: 0 6px 0;
@@ -42,15 +43,11 @@ export const DirectoryItemContainer = styled.div`
   margin: 0 7.5px 15px;
   overflow: hidden;
 
-
   &:hover {
     cursor: pointer;
-    border: none;
-    &:hover {
     box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
     transform: scale(1);
     transition: transform 6s ease-in-out;
-  }
 
     ${BackgroundImage} {
       transform: scale(1.1);
@@ -59,7 +56,7 @@ export const DirectoryItemContainer = styled.div`
 
     ${DirectoryBodyContainer} {
       opacity: 0.9;
-      border: none;
+      border: 1px solid black;
     }
   }
 

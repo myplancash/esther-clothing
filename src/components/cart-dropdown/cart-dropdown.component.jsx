@@ -1,18 +1,21 @@
 import { useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom';
 import { selectCartItems } from '../../store/cart/cart.selector';
+import { selectCartTotal } from '../../store/cart/cart.selector';
 
 import Button from '../button/button.component';
 import CartItem from '../cart-item/cart-item.component';
 
 import {
   CartDropdownContainer,
-  CartItems
+  CartItems,
+  Total
 } from './cart-dropdown.styles.jsx';
 
 const CartDropdown = () => {
   const cartItems = useSelector(selectCartItems);
   const navigate = useNavigate();
+  const cartTotal = useSelector(selectCartTotal);
 
 
   const goToCheckoutHandler = () => {
@@ -28,6 +31,7 @@ const CartDropdown = () => {
           <span>Your Cart is Empty</span>
         )}
       </CartItems>
+      <Total>TOTAL: ${cartTotal}</Total>
       <Button onClick={goToCheckoutHandler}>GO TO CHECKOUT</Button>
     </CartDropdownContainer>
   );

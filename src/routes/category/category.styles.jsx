@@ -13,4 +13,5 @@ export const CategoryTitle = styled.h2`
   text-align: center;
   font-size: 2rem;
   margin-bottom: 1em;
+  letter-spacing: 0.1em;
 `

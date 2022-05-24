@@ -24,7 +24,7 @@ const CartItem = ({ cartItem }) => {
       <ImageDetails>
         <Name>{name}</Name>
         <Price>
-          {quantity} x ${price}
+          {quantity} - ${price * quantity}
         </Price>
       </ImageDetails>
       <RemoveButton onClick={clearItemHandler}>&#10005;</RemoveButton>
