@@ -12,7 +12,7 @@ export const Image = styled.img`
   width: 40%;
   align-self: center;
 `
-export const ImageDetails =  styled.div`
+export const ImageDetails = styled.div`
   width: 50%;
   display: flex;
   flex-direction: column;

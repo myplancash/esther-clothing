@@ -6,7 +6,7 @@ import { setIsCartOpen } from '../../store/cart/cart.action';
 import {
   CartIconContainer,
   ShoppingIconStyles,
-  ItemCount
+  CartCount
 } from './cart-icon.styles.jsx';
 
 const CartIcon = () => {
@@ -19,7 +19,7 @@ const CartIcon = () => {
   return (
     <CartIconContainer onClick={toggleIsCartOpen}>
       <ShoppingIconStyles/>
-      <ItemCount>{cartCount}</ItemCount>
+      <CartCount>{cartCount}</CartCount>
     </CartIconContainer>
   );
 };
