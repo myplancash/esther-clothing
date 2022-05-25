@@ -19,7 +19,7 @@ export const ShoppingIconStyles = styled(ShoppingIcon)`
   color: rgb(0 0 0);
   font-size: 22px;
   margin-top: 5px;
-  // transform: rotate(90deg);∫
+  // transform: rotate(90deg);
 
   &:hover {
     -webkit-animation-name: heart;
