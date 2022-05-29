@@ -5,10 +5,8 @@ import CheckoutItem from '../../components/checkout-item/checkout-item.component
 import { CheckoutContainer, CheckoutHeader, HeaderBlock, Total} from './checkout.styles.jsx';
 
 const Checkout = () => {
-
   const cartItems = useSelector(selectCartItems);
   const cartTotal = useSelector(selectCartTotal);
-
 
   return (
     <CheckoutContainer>
@@ -37,4 +35,4 @@ const Checkout = () => {
   );
 };
 
-export default Checkout``;
+export default Checkout;

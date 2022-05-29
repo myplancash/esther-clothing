@@ -1,26 +1,34 @@
-import { compose, applyMiddleware, createStore } from 'redux';
-import logger from 'redux-logger';
+import { compose, createStore, applyMiddleware } from 'redux';
 import { persistStore, persistReducer } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
+import logger from 'redux-logger';
 
 import { rootReducer } from './root-reducer';
+
+const middleWares = [process.env.NODE_ENV === 'development' && logger].filter(
+  Boolean
+);
+
+const composeEnhancer =
+  (process.env.NODE_ENV !== 'production' &&
+    window &&
+    window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__) ||
+  compose;
 
 const persistConfig = {
   key: 'root',
   storage,
-  blacklist: ['user']
-}
+  blacklist: ['user'],
+};
 
-const persistedReducer = persistReducer(persistConfig, rootReducer)
+const persistedReducer = persistReducer(persistConfig, rootReducer);
 
-//runs before an action hits the reducer, catch actions before they hits reducer
-const middleWares = [process.env.NODE_ENV !== 'production' && logger].filter(Boolean);
+const composedEnhancers = composeEnhancer(applyMiddleware(...middleWares));
 
-const composeEnhancers = (process.env.NODE_ENV !== 'production' && window && window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__) || compose;
-
-//functional programming concept a way pass multiple functions left to rigth
-const composedEnhancers = composeEnhancers(applyMiddleware(...middleWares));
-
-export const store = createStore(persistedReducer, undefined, composedEnhancers);
+export const store = createStore(
+  persistedReducer,
+  undefined,
+  composedEnhancers
+);
 
 export const persistor = persistStore(store);
