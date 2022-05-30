@@ -2,7 +2,7 @@ import { PICKER_COLOR_TYPES } from './picker-color.types';
 
 const PICKER_INITIAL_STATE = {
   isPickerOpen: false,
-  color: '#34568B'
+  color: '#34568B',
 }
 
 export const pickerColorReducer = (state=PICKER_INITIAL_STATE, action={}) => {

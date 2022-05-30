@@ -24,6 +24,7 @@ export const InputColor = styled.input`
 `
 
 export const ColorBodyContainer = styled.div`
+  cursor: pointer;
   height: 90px;
   padding: 0 25px;
   display: flex;

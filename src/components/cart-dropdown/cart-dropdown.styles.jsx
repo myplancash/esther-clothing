@@ -28,13 +28,20 @@ export const CartItems = styled.div`
   overflow: scroll;
   padding: 1em;
   justify-content: flex-start;
-  color: "#A9A9A9";
   box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
 
-  span {
-    color: "#A9A9A9";
-  }
+  color: #0A2038;
+  align-text: center;
+  font-size: .5rem;
 `
+
+export const Empty = styled.span`
+  color: #A6A6A6;
+  align-text: center;
+  font-size: .9rem;
+  margin: 0 auto;
+`
+
 export const Total = styled.div`
   margin: auto;
   padding: .6em;

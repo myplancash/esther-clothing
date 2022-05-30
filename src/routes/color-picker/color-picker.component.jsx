@@ -7,13 +7,13 @@ import ColorArea from '../../components/color-area/color-area.component';
 import Color from '../../components/color/color.component';
 import '../../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import Picker from '../../components/picker/picker.component';
-import { selectPickerColor } from '../../store/picker-color/picker-color.selector';
+// import { selectPickerColor } from '../../store/picker-color/picker-color.selector';
 
 
 
 const ColorPicker = () => {
   const colorArea = useSelector(selectColorArea);
-  const color = useSelector(selectPickerColor);
+  // const color = useSelector(selectPickerColor);
   const newColors = [
     {
       id: 1,
@@ -34,7 +34,7 @@ const ColorPicker = () => {
       <Title>Color Picker:</Title>
       <ColorContainer>
         <ColorArea colorArea={colorArea} />
-        <Picker color={color}/>
+        <Picker colorArea={colorArea}/>
         {newColors.map((colorToAdd) => (
           <Color key={colorToAdd.id} colorToAdd={colorToAdd} />
         ))}

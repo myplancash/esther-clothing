@@ -9,7 +9,8 @@ import CartItem from '../cart-item/cart-item.component';
 import {
   CartDropdownContainer,
   CartItems,
-  Total
+  Total,
+  Empty
 } from './cart-dropdown.styles.jsx';
 
 const CartDropdown = () => {
@@ -29,7 +30,7 @@ const CartDropdown = () => {
         {cartItems.length > 0 ? cartItems.map((item) => (
           <CartItem key={item.id} cartItem={item} />
         )) : (
-          <span>Your Cart is Empty</span>
+          <Empty>Your Cart is Empty</Empty>
         )}
       </CartItems>
       <Total>TOTAL: ${cartTotal}</Total>

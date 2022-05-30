@@ -42,4 +42,5 @@ export const PickerContainer = styled.div`
   align-items: center;
   justify-content: center;
   margin: 0 7.5px 15px;
+  background-color: ${({color}) => color};
 `
