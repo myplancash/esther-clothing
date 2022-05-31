@@ -9,7 +9,6 @@ import {
 
 const CategoryPreview = ({ title, products }) => {
 
-
   return (
     <CategoryPreviewContainer>
         <TitleContainer>
