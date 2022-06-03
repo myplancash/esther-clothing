@@ -30,9 +30,6 @@ const Navigation = () => {
           <Link to='/'><Logo/></Link>
         </LogoContainer>
         <NavLinks>
-          <NavLink to='/color'>
-            COLOR
-          </NavLink>
           <NavLink to='/shop'>
             SHOP
           </NavLink>
