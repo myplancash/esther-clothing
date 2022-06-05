@@ -9,7 +9,17 @@ import {
   signOut,
   onAuthStateChanged,
 } from 'firebase/auth';
-import { getFirestore, doc, getDoc, setDoc, collection, writeBatch, query, getDocs } from 'firebase/firestore';
+
+import {
+  getFirestore,
+  doc,
+  getDoc,
+  setDoc,
+  collection,
+  writeBatch,
+  query,
+  getDocs
+} from 'firebase/firestore';
 
 const firebaseConfig = {
   apiKey: "AIzaSyCZ9B_Oc5ojio7IhI6fLGmkonfwROxXYZo",
@@ -92,7 +102,7 @@ export const createUserDocumentFromAuth = async (
     }
   }
 
-  return userDocRef;
+  return userSnapshot;
 };
 
 export const createAuthUserWithEmailAndPassword = async (email, password) => {
@@ -119,7 +129,20 @@ export const getCurrentUser = () => {
       auth,
       (userAuth) => {
         unsubscribe();
-        resolve(userAuth)
+        resolve(userAuth);
+      },
+      reject
+    )
+  });
+};
+
+export const getUserWithEmailAndPassword = () => {
+  return new Promise((resolve, reject) => {
+    const unsubscribe = signInWithEmailAndPassword(
+      auth,
+      (authUser) => {
+        unsubscribe();
+        resolve(authUser)
       },
       reject
     )
