@@ -135,16 +135,3 @@ export const getCurrentUser = () => {
     )
   });
 };
-
-export const getUserWithEmailAndPassword = () => {
-  return new Promise((resolve, reject) => {
-    const unsubscribe = signInWithEmailAndPassword(
-      auth,
-      (authUser) => {
-        unsubscribe();
-        resolve(authUser)
-      },
-      reject
-    )
-  })
-}
