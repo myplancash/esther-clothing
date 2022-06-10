@@ -33,7 +33,6 @@ const SignInForm = () => {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-
     try {
       dispatch(emailSignInStart(email, password));
       // await signInAuthUserWithEmailAndPassword(email, password);

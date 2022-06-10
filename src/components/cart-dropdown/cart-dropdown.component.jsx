@@ -29,7 +29,7 @@ const CartDropdown = () => {
       <CartItems>
         {cartItems.length > 0 ? cartItems.map((item) => (
           <CartItem key={item.id} cartItem={item} />
-        )) : (
+        )).sort((a, b) => a > b ? 1 : -1) : (
           <Empty>Your Cart is Empty</Empty>
         )}
       </CartItems>

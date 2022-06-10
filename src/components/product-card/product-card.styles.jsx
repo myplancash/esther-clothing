@@ -5,6 +5,7 @@ export const ProductImage = styled.img`
   width: 100%;
   height: 95%;
   object-fit: cover;
+  align-items: center;
   margin-bottom: 5px;
 
   &:hover {
@@ -18,6 +19,7 @@ export const ProductImage = styled.img`
 
 export const ProductCardContainer = styled.div`
   width: 100%;
+  align-self: stretch;
   display: flex;
   flex-direction: column;
   height: 350px;
@@ -25,11 +27,13 @@ export const ProductCardContainer = styled.div`
   position: relative;
 
   button {
+    align-items: center;
     width: 80%;
     opacity: 0.7;
     position: absolute;
     top: 255px;
     display: none;
+    align-self: center;
   }
 
   &:hover {
@@ -40,6 +44,7 @@ export const ProductCardContainer = styled.div`
     button {
       opacity: 0.85;
       display: flex;
+      align-self: center;
     }
   }
 `

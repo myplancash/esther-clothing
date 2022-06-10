@@ -57,7 +57,7 @@ const Directory = () => {
       <DirectoryContainer>
         {categories.map((category) => (
           <DirectoryItem key={category.id} category={category} />
-        ))}
+        )).sort((a, b) => a > b ? 1 : -1  )}
       </DirectoryContainer>
       <Copy>© 2022 Esther, Inc.</Copy>
     </Fragment>

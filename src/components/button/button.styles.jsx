@@ -1,26 +1,39 @@
-import styled from 'styled-components';
+import styled, {css} from 'styled-components';
+
+const whiteColor = '#FFFDFA';
+const blackColor = '#070606';
+
+const googleButton = '#4285f4';
+const googleButtonHover = '#357ae8';
+
+const flexStyles = css`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+`
+
 
 export const BaseButton = styled.button`
-
-  align-items: center;
+  align-self: stretch;
+  ${flexStyles}
   appearance: none;
-  background-color: #fff;
+  background-color: ${whiteColor};
   border-radius: 3px;
   border-style: none;
   box-shadow: rgba(0, 0, 0, .2) 0 3px 5px -1px,rgba(0, 0, 0, .14) 0 6px 10px 0,rgba(0, 0, 0, .12) 0 1px 18px 0;
   box-sizing: border-box;
-  color: #3c4043;
+  color: ${blackColor};
   cursor: pointer;
-  display: inline-flex;
+  //display: inline-flex;
   fill: currentcolor;
   font-weight: 500;
   height: 48px;
-  justify-content: center;
   letter-spacing: .25px;
   line-height: normal;
   max-width: 100%;
   overflow: visible;
-  padding: 2px 24px;
+  // padding: 2px 24px;
   position: relative;
   text-align: center;
   text-transform: none;
@@ -29,7 +42,7 @@ export const BaseButton = styled.button`
   -webkit-user-select: none;
   touch-action: manipulation;
   width: auto;
-  will-change: transform,opacity;
+  will-change: transform, opacity;
   z-index: 0;
 
   min-width: 165px;
@@ -39,8 +52,8 @@ export const BaseButton = styled.button`
   line-height: 50px;
   padding: 0 1em;
   font-size: 15px;
-  background-color: black;
-  color: white;
+  background-color: ${blackColor};
+  color: ${whiteColor};
   text-transform: uppercase;
   font-family: 'Encode Sans', sans-serif;
   font-weight: bolder;
@@ -50,35 +63,35 @@ export const BaseButton = styled.button`
   justify-content: center;
 
   &:hover {
-    background: #F6F9FE;
-    color: black;
-    border: 1px solid black;
+    background: ${whiteColor};
+    color: ${blackColor};
+    border: 1px solid ${blackColor};
   }
 
   &:focus {
     outline: none;
-    border: 2px solid #4285f4
+    border: 2px solid ${googleButton};
   }
 `
 
 export const GoogleButton = styled(BaseButton)`
-  background-color: #4285f4;
-  color: white;
+  background-color: ${googleButton};
+  color: ${whiteColor};
 
   &:hover {
-    background-color: #357ae8;
+    background-color: ${googleButtonHover};
     border: none;
   }
 `
 
 export const InvertedButton = styled(BaseButton)`
-  background-color: white;
-  color: black;
-  border: 1px solid black;
+  background-color: ${whiteColor};
+  color: ${blackColor};
+  border: 1px solid ${blackColor};
 
   &:hover {
-    background-color: black;
-    color: white;
+    background-color: ${blackColor};
+    color: ${whiteColor};
     border: none;
   }
 `

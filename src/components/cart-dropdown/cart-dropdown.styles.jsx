@@ -1,5 +1,14 @@
-import styled from 'styled-components'
+import styled, {css} from 'styled-components'
 
+const subColor = '#A6A6A6';
+const mainColor = '#0A2038';
+
+const flexStyles = css`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+`
 
 export const CartDropdownContainer = styled.div`
   position: absolute;
@@ -8,9 +17,7 @@ export const CartDropdownContainer = styled.div`
   padding: 20px;
   border: 1px solid black;
   background-color: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  ${flexStyles}
   top: 100px;
   right: 40px;
   z-index: 5;
@@ -31,13 +38,13 @@ export const CartItems = styled.div`
   justify-content: flex-start;
   box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
 
-  color: #0A2038;
+  color: ${mainColor};
   align-text: center;
   font-size: .5rem;
 `
 
 export const Empty = styled.span`
-  color: #A6A6A6;
+  color: ${subColor};
   align-text: center;
   font-size: .9rem;
   margin: 0 auto;

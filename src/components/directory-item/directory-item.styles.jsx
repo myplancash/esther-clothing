@@ -34,10 +34,11 @@ export const DirectoryBodyContainer = styled.div`
 `
 
 export const DirectoryItemContainer = styled.div`
+  flex-shrink: 3;
   min-width: 20%;
   height: 240px;
   display: flex;
-  flex: 1 1 auto;
+  flex: 2 1 auto;
   align-items: center;
   justify-content: center;
   margin: 0 7.5px 15px;

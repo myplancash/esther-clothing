@@ -19,7 +19,7 @@ const CategoryPreview = ({ title, products }) => {
               .filter((_, idx) => idx < 4)
               .map((product) => (
               <ProductCard key={product.id} product={product} />
-            ))}
+            )).sort((a, b) => a > b ? 1 : -1) }
         </Preview>
     </CategoryPreviewContainer>
   );
