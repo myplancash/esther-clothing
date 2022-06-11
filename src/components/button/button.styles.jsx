@@ -1,4 +1,5 @@
 import styled, {css} from 'styled-components';
+import { SpinnerContainer } from '../spinner/spinner.styles';
 
 const whiteColor = '#FFFDFA';
 const blackColor = '#070606';
@@ -16,6 +17,7 @@ const flexStyles = css`
 
 export const BaseButton = styled.button`
   align-self: stretch;
+  align-items: center;
   ${flexStyles}
   appearance: none;
   background-color: ${whiteColor};
@@ -94,4 +96,10 @@ export const InvertedButton = styled(BaseButton)`
     color: ${whiteColor};
     border: none;
   }
+`
+
+
+export const ButtonSpinner = styled(SpinnerContainer)`
+  width: 30px;
+  height: 30px;
 `
