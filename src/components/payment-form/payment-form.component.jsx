@@ -5,9 +5,10 @@ import { useSelector } from 'react-redux';
 import { selectCartTotal } from '../../store/cart/cart.selector';
 import { selectCurrentUser } from '../../store/user/user.selector';
 
+import { FormContainer } from './payment-form.styles';
 import { BUTTON_TYPE_CLASSES } from '../button/button.component';
 
-import { PaymentButton, PaymentFormContainer, FormContainer } from './payment-form.styles';
+import { PaymentButton, PaymentFormContainer } from './payment-form.styles';
 
 const PaymentForm = () => {
   const stripe = useStripe();
@@ -21,7 +22,6 @@ const PaymentForm = () => {
     if (!stripe || !elements) {
       return;
     }
-
     setIsProcessingPayment(true);
 
     const response = await fetch('/.netlify/functions/create-payment-intent', {
@@ -33,6 +33,8 @@ const PaymentForm = () => {
     }).then((res) => {
       return res.json();
     });
+
+    console.log(response);
 
     const clientSecret = response.paymentIntent.client_secret;
 

@@ -76,7 +76,7 @@ export const BaseButton = styled.button`
   }
 `
 
-export const GoogleButton = styled(BaseButton)`
+export const GoogleSignInButton = styled(BaseButton)`
   background-color: ${googleButton};
   color: ${whiteColor};
 
@@ -98,8 +98,7 @@ export const InvertedButton = styled(BaseButton)`
   }
 `
 
-
-export const ButtonSpinner = styled(SpinnerContainer)`
+export const LoadingSpinner = styled(SpinnerContainer)`
   width: 30px;
   height: 30px;
 `
